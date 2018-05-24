@@ -18,7 +18,7 @@ class App extends Component {
             lastName: "Agnoletti",
             middleName: "Rose",
             cohort: 25,
-            address: "Absolutely non-of-ya",
+            address: "absolutely non-of-ya",
             vehicle: "Portal gun",
             pet: "toy or mini elephant"
         }
