@@ -37,21 +37,31 @@ class App extends Component {
       })
       .then(r => r.json())
       .then(co => {
+        if (co.peopleId === this.state.name.id) {
         this.setState({cohort: co})
+        }
         return fetch("http://localhost:8080/address/1")
       })
       .then(r => r.json())
       .then(add => {
+        if (add.peopleId === this.state.name.id) {
         this.setState({address: add})
+      }
         return fetch("http://localhost:8080/pet/1")
       })
       .then(r => r.json())
       .then(meow=> {
+        if (meow.peopleId === this.state.name.id) {
         this.setState({pet: meow})
+      }
         return fetch("http://localhost:8080/vehicle/1")
       })
       .then(r => r.json())
-      .then(veh => this.setState({vehicle: veh}))
+      .then(veh => {
+        if (veh.peopleId === this.state.name.id) {
+          this.setState({vehicle: veh})
+        }
+      })
   }
 
   render() {
