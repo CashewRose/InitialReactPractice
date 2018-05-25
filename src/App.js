@@ -9,15 +9,33 @@ import Pet from './pet';
 
 
 class App extends Component {
-  state = {
-            firstName: "Cashew",
-            lastName: "Agnoletti",
-            middleName: "Rose",
-            cohort: 25,
-            address: "absolutely non-of-ya",
-            vehicle: "Portal gun",
-            pet: "toy or mini elephant"
+    constructor (props) {
+        super(props)
+
+        // Put all information about yourself as state properties
+        this.state = {}
+    }
+    /*
+        Get all contacts from the API. This is the fetch
+        syntax which replaces $.ajax()
+
+        https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+    */
+   loadContacts () {
+    fetch("http://localhost:8080/people/1")
+        // Must be explicit on how to parse the response
+        .then(r => r.json())
+
+        // JSON parsed data comes to this then()
+        .then(contacts => {
+            this.setState(contacts)
+        })
   }
+
+  componentDidMount() {
+    this.loadContacts()  // Trigger the loading of contacts
+  }
+
   render() {
     return (
       <div className="App">

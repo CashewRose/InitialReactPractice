@@ -1,0 +1,13 @@
+
+section {
+    display: inline;
+}
+
+.name::first-letter {
+    font-size: 200%;
+    color: navy;
+}
+
+.name {
+    font-weight: bolder
+}

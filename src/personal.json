@@ -1,0 +1,14 @@
+{
+    "people": [
+        {
+            "id": 1,
+            "firstName": "Cashew",
+            "lastName": "Agnoletti",
+            "middleName": "Rose",
+            "cohort": 25,
+            "address": "absolutely non-of-ya",
+            "vehicle": "Portal gun",
+            "pet": "toy or mini elephant"
+        }
+    ]
+}

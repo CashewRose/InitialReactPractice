@@ -55,3 +55,38 @@ export default Me
 ```
 
 Now, pass the state values from your personal component to each of its children, and use those props in the children components.
+
+
+## Challenge
+
+Now it's time to take your personal data and expose it through an API with `json-server`. Create a `personal.json` file in your project with a `people` collection. Put your information in that collection.
+
+```json
+{
+    "people": [
+        {
+            // Your properties go here
+        }
+    ]
+}
+```
+
+Start your API with the following command.
+
+```sh
+json-server -p 8080 -w personal.json
+```
+
+Update your personal component to retrieve the information from the API, and when it is received, update the state of your component.
+
+## Challenge Part 2
+
+Create multiple collections in your API.
+
+1. Bio info (name and address)
+1. Car information
+1. Pet information
+
+Use foreign keys to assign cars and pets to a person.
+
+Once that's done, update your `componentDidMount` function to load all the related data, and use `setState` when each response comes back.
