@@ -9,11 +9,7 @@ import Pet from './pet';
 
 
 class App extends Component {
-    constructor (props) {
-        super(props)
-
-        // Put all information about yourself as state properties
-        this.state = {
+  state = {
             firstName: "Cashew",
             lastName: "Agnoletti",
             middleName: "Rose",
@@ -21,8 +17,7 @@ class App extends Component {
             address: "absolutely non-of-ya",
             vehicle: "Portal gun",
             pet: "toy or mini elephant"
-        }
-    }
+  }
   render() {
     return (
       <div className="App">
