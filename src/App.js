@@ -13,7 +13,13 @@ class App extends Component {
         super(props)
 
         // Put all information about yourself as state properties
-        this.state = {}
+        this.state = {
+          name:[],
+          cohort:[],
+          address:[],
+          vehicle: [],
+          pet: []
+        }
     }
     /*
         Get all contacts from the API. This is the fetch
@@ -21,19 +27,31 @@ class App extends Component {
 
         https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
     */
-   loadContacts () {
-    fetch("http://localhost:8080/people/1")
-        // Must be explicit on how to parse the response
-        .then(r => r.json())
-
-        // JSON parsed data comes to this then()
-        .then(contacts => {
-            this.setState(contacts)
-        })
-  }
-
+  
   componentDidMount() {
-    this.loadContacts()  // Trigger the loading of contacts
+    fetch(`http://localhost:8080/people/1`)
+      .then(r => r.json())
+      .then(me => {
+        this.setState({name: me})
+        return fetch("http://localhost:8080/cohort/1")
+      })
+      .then(r => r.json())
+      .then(co => {
+        this.setState({cohort: co})
+        return fetch("http://localhost:8080/address/1")
+      })
+      .then(r => r.json())
+      .then(add => {
+        this.setState({address: add})
+        return fetch("http://localhost:8080/pet/1")
+      })
+      .then(r => r.json())
+      .then(meow=> {
+        this.setState({pet: meow})
+        return fetch("http://localhost:8080/vehicle/1")
+      })
+      .then(r => r.json())
+      .then(veh => this.setState({vehicle: veh}))
   }
 
   render() {
@@ -44,11 +62,11 @@ class App extends Component {
           <h1 className="App-title">Welcome to Cashew's React</h1>
         </header>
         <ul>
-          <Name first={this.state.firstName} middle={this.state.middleName} last={this.state.lastName}/>
-          <Cohort cohort={this.state.cohort}/>
-          <Address address={this.state.address} />
-          <Vehicle ride={this.state.vehicle}/>
-          <Pet pet={this.state.pet}/>
+          <Name first={this.state.name.firstName} middle={this.state.name.middleName} last={this.state.name.lastName}/>
+          <Cohort cohort={this.state.cohort.number}/>
+          <Address address={this.state.address.streetname} />
+          <Vehicle ride={this.state.vehicle.model}/>
+          <Pet pet={this.state.pet.species} size={this.state.pet.size}/>
         </ul>
       </div>
     );

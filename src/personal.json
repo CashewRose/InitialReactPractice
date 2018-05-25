@@ -4,11 +4,36 @@
             "id": 1,
             "firstName": "Cashew",
             "lastName": "Agnoletti",
-            "middleName": "Rose",
-            "cohort": 25,
-            "address": "absolutely non-of-ya",
-            "vehicle": "Portal gun",
-            "pet": "toy or mini elephant"
+            "middleName": "Rose"
+        }
+    ],
+    "cohort": [
+        {
+        "id": 1,
+        "number": 25,
+        "peopleId": 1
+        }
+    ],
+    "address": [
+        {
+        "id": 1,
+        "streetname": "absolutely non-of-ya biz rd",
+        "peopleId": 1
+        }
+    ],
+    "vehicle": [
+        {
+        "id": 1,
+        "model": "Portal gun",
+        "peopleId": 1
+        }
+    ],
+    "pet": [
+        {
+        "id": 1,
+        "size": "toy or a mini",
+        "species": "elephant",
+        "peopleId": 1
         }
     ]
 }

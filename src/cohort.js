@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import "./styles/cohort.css"
 
 class Cohort extends Component {
     render() {

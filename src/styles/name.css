@@ -1,6 +1,7 @@
 
 section {
-    display: inline;
+    display: inline-block;
+    margin-left: 10px
 }
 
 .name::first-letter {

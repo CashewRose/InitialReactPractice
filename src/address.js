@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import "./styles/address.css"
 
 class Address extends Component {
     render() {

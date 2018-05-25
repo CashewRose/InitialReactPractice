@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import "./styles/vehicle.css"
 
 class Vehicle extends Component {
     render() {
