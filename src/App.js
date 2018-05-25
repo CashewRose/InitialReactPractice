@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import logo from './paisley.svg';
 import './App.css';
 import Name from './name';
 import Address from './address';
@@ -18,7 +18,8 @@ class App extends Component {
           cohort:[],
           address:[],
           vehicle: [],
-          pet: []
+          pet: [],
+          img: ""
         }
     }
     /*
@@ -64,12 +65,16 @@ class App extends Component {
       })
   }
 
+  loadAnImage = function(event) {
+    this.setState({img: "src ='http://i0.kym-cdn.com/photos/images/original/000/685/404/c01.jpg"})
+  }.bind(this)
+
   render() {
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to Cashew's React</h1>
+          <h1 className="App-title">Welcome to Cashew's Personal React Website</h1>
         </header>
         <ul>
           <Name first={this.state.name.firstName} middle={this.state.name.middleName} last={this.state.name.lastName}/>
@@ -77,6 +82,10 @@ class App extends Component {
           <Address address={this.state.address.streetname} />
           <Vehicle ride={this.state.vehicle.model}/>
           <Pet pet={this.state.pet.species} size={this.state.pet.size}/>
+          {/* <button onClick={this.loadAnImage}>
+                    Show a Picture
+                </button> */}
+          {/* <img alt="ele" src={this.state.img}></img> */}
         </ul>
       </div>
     );

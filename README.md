@@ -90,3 +90,26 @@ Create multiple collections in your API.
 Use foreign keys to assign cars and pets to a person.
 
 Once that's done, update your `componentDidMount` function to load all the related data, and use `setState` when each response comes back.
+
+# NavBar Challenge
+
+Create a navigation bar for your application with three links in it.
+
+1. Home
+1. Projects
+1. About Me
+
+The home page should display the following information.
+
+1. Your name
+1. List of technologies you've learned so far
+
+The projects page should list the name and a link to the repo for each group project that you've worked on so far.
+
+The about me page should display any other interesting information about yourself that you want others to know.
+
+1. Favorite frogs
+1. Places you've traveled
+1. Comic book collection
+
+etc...

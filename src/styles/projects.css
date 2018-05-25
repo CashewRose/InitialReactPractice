@@ -1,0 +1,9 @@
+article {
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+#root {
+    background: rgb(121,9,97);
+    background: linear-gradient(85deg, rgba(121,9,97,1) 0%, rgba(238,174,202,1) 35%, rgba(0,212,255,1) 100%);
+} 
+

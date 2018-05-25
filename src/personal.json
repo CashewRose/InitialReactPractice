@@ -35,5 +35,31 @@
         "species": "elephant",
         "peopleId": 1
         }
+    ],
+    "projects": [
+        {
+            "id": 1,
+            "name": "Nashville Software School Intelligence Agency Report",
+            "groupRepo": "https://github.com/nss-day-cohort-25/intelligence-report-acid-hedgehogs",
+            "personalGroupRepo": "https://github.com/CashewRose/Group-Projects-Self-Progression/tree/master/intelligence-report-acid-hedgehogs"
+        },
+        {
+            "id": 2,
+            "name": "The Librarian",
+            "groupRepo": "https://github.com/nss-day-cohort-25/the-librarian-rough-snails",
+            "personalGroupRepo": "https://github.com/CashewRose/Group-Projects-Self-Progression/tree/master/rough-snails-librarian"
+        },
+        {
+            "id": 3,
+            "name": "The Task Tracker",
+            "groupRepo": "https://github.com/UnknownPanthers",
+            "personalGroupRepo": "https://github.com/CashewRose/Group-Projects-Self-Progression/tree/master/unknownPanthers"
+        },
+        {
+            "id": 4,
+            "name": "Nutshell",
+            "groupRepo": "https://github.com/nss-defective-foxes",
+            "personalGroupRepo": "https://github.com/CashewRose/Group-Projects-Self-Progression/tree/master/defective-foxes"
+        }
     ]
 }
