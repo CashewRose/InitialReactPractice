@@ -8,7 +8,7 @@ class NavBar extends Component {
         return (
             <nav className="navbar">
                 <Link to="/">Home</Link>
-                <Link to="/projects">ProjectList</Link>
+                <Link to="/projects">Project List</Link>
             </nav>
         );
     }

@@ -1,0 +1,15 @@
+nav {
+    border: 4px double lightpink;
+    margin-bottom: 40px; 
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly
+}
+
+nav > a{
+    font-family: cursive;
+    font-weight: 200;
+    font-size: 110%;
+    padding-left: 30px;
+    padding-right: 30px; 
+}

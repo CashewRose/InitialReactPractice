@@ -1,3 +1,11 @@
 div {
     border: dotted lightpink 5px;
 }
+
+a:hover {
+    background: lightpink
+}
+
+.listLink:hover {
+    background: lightblue;
+}
